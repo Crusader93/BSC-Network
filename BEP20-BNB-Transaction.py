@@ -51,7 +51,7 @@ def myfunc():
             wei = gwei * k
             global amount
             amount = balance - (wei*gas)
-        elsif amount > calcAmount:
+        elif amount > calcAmount:
             print("Not enough funds. Too much gas price: " + str(tax))
             print("Maximum allowed amount is " + str(calcAmount/eth))
             sys.exit()
