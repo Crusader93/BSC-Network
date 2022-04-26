@@ -37,7 +37,7 @@ def myfunc():
     humanReadable = balance/eth # converting
     print("Balance: " + str(humanReadable))
 
-    if humanReadable > 0.00011:
+    if humanReadable > 0.000105: # min BNB tax - 5 GWEI
 
         gas = 21000 # gasLimit
         gwei = 5 # gasPrice in gwei
@@ -71,7 +71,7 @@ def myfunc():
         print("DONE")
         # telegram_botsendtext("Balance: " + str(humanReadable))
     else:
-        print("The balance is less than the minimum network tax 0.00011")
+        print("The balance is less than the minimum network tax 0.000105 BNB")
 
 if __name__ == '__main__':
     try:
