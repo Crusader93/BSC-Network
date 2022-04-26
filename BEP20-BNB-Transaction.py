@@ -33,6 +33,7 @@ amount = 0.02 # BNB amount for transaction
 amount = int(amount * eth)
 
 def myfunc():
+    global amount
     balance = web3.eth.get_balance(account_1)
     humanReadable = balance/eth # converting
     print("Balance: " + str(humanReadable))
@@ -53,7 +54,6 @@ def myfunc():
         if amount == balance:
             gwei = 5
             wei = gwei * k
-            global amount
             amount = balance - (wei*gas)
         elif amount > calcAmount:
             print("Not enough funds. Too much gas price: " + str(tax))
