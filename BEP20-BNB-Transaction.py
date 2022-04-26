@@ -49,10 +49,9 @@ def myfunc():
             print("The amount cannot be less than the network tax!")
             sys.exit()
 
-        if amount >= (humanReadable-0.00011):
-            warnAmount = (balance - (wei*gas))/eth
+        if amount >= calcAmount:
             print("The amount cannot be greater than (balance-network tax)")
-            print("Maximum allowed amount is " + str(warnAmount))
+            print("Maximum allowed amount is " + str(calcAmount/eth))
             sys.exit()
 
         nonce = web3.eth.getTransactionCount(account_1)
@@ -60,7 +59,7 @@ def myfunc():
         tx = {
         'nonce': nonce,
         'to': account_2,
-        'value': int(calcAmount),
+        'value': int(amount),
         'gas': gas,
         'gasPrice': int(wei)
         }
