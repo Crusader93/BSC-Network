@@ -45,7 +45,7 @@ def myfunc():
 
         calcAmount = balance - (wei*gas) # calculated amount with network tax
 
-        if amount <= 0.00011:
+        if amount <= (balance-calcAmount):
             print("The amount cannot be less than the network tax!")
             sys.exit()
 
