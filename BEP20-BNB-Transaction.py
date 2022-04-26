@@ -30,6 +30,8 @@ account_2 = "" # to
 private = "" # account_1 key
 
 amount = 0.02 # BNB amount for transaction
+
+checkAmount = amount
 amount = int(amount * eth)
 
 def myfunc():
@@ -51,7 +53,7 @@ def myfunc():
         calcAmount = balance - (wei*gas) # calculated amount with network tax
         tax = (balance-calcAmount)/eth # tax
 
-        if amount == balance:
+        if checkAmount == humanReadable: # Transfer the entire balance of the wallet if the user sets the amount equal to the balance of the wallet
             gwei = 5
             wei = gwei * k
             amount = balance - (wei*gas)
