@@ -45,6 +45,10 @@ def myfunc():
         wei = gwei * k # calculated gasPrice in wei
         summ = balance - (wei*gas)
 
+        if gwei < 5:
+            print("gasPrice cant be less than 5 GWEI")
+            sys.exit()
+
         if summ <= 0:
             allowedGas = balance/wei
             print("Too much gasLimit, you need gasLimit less than: " + str(allowedGas))
