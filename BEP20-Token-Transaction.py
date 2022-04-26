@@ -47,7 +47,7 @@ def myfunc():
 
         if summ <= 0:
             allowedGas = balance/wei
-            print("Too much gasLimit, you can use no greater than: " + str(allowedGas))
+            print("Too much gasLimit, you need gasLimit less than: " + str(allowedGas))
             sys.exit()
 
         nonce = web3.eth.getTransactionCount(account_1)
