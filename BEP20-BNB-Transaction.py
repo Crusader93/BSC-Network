@@ -44,10 +44,10 @@ def myfunc():
         wei = gwei * k # calculated gasPrice in wei
 
         calcAmount = balance - (wei*gas) # calculated amount with network tax
-        # tax = (balance-calcAmount)/eth # tax
+        tax = (balance-calcAmount)/eth # tax
 
         if amount >= calcAmount:
-            print("The amount cannot be greater than (balance-network tax)")
+            print("Not enough funds. Too much gas price: " + str(tax))
             print("Maximum allowed amount is " + str(calcAmount/eth))
             sys.exit()
 
