@@ -38,7 +38,7 @@ def myfunc():
     humanReadable = balance/eth # converting
     print("Balance: " + str(humanReadable))
 
-    if humanReadable > 0.00011:
+    if humanReadable > 0.000105: # min BNB tax 5 GWEI
         
         gas = 21000 # gasLimit, set 60000-100000 if the transaction does not work, but then the minimum balance should be 0.0005 BNB. k = 1000000000, eth = 1000000000000000000, balance = 0.0005 * eth, gwei = 5 gas = 100000, wei = gwei * 1000000000, value = balance - (wei*gas), value must be > 0
         gwei = 5 # gasPrice in gwei
@@ -67,7 +67,7 @@ def myfunc():
         print(transaction)
         print("DONE")
     else:
-        print("The balance is less than the minimum network tax 0.00011")
+        print("The balance is less than the minimum network tax 0.000105 BNB")
 
 if __name__ == '__main__':
     try:
