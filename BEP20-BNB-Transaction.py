@@ -50,6 +50,12 @@ def myfunc():
             print("Not enough funds. Too much gas price: " + str(tax))
             print("Maximum allowed amount is " + str(calcAmount/eth))
             sys.exit()
+        else:
+        if amount == balance:
+            gwei = 5
+            wei = gwei * k
+            global amount
+            amount = balance - (wei*gas)
 
         nonce = web3.eth.getTransactionCount(account_1)
 
