@@ -43,7 +43,7 @@ def myfunc():
         gwei = 5 # gasPrice in gwei
         wei = gwei * k # calculated gasPrice in wei
 
-        calcAmount = amount - (wei*gas) # calculated amount with network tax
+        calcAmount = balance - (wei*gas) # calculated amount with network tax
 
         if amount <= 0.00011:
             print("The amount cannot be less than the network tax!")
