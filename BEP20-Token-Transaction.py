@@ -40,7 +40,7 @@ def myfunc():
 
     if humanReadable > 0.000105: # min BNB tax 5 GWEI
         
-        gas = 21000 # gasLimit, set 60000-100000 if the transaction does not work, but then the minimum balance should be 0.0005 BNB. k = 1000000000, eth = 1000000000000000000, balance = 0.0005 * eth, gwei = 5 gas = 100000, wei = gwei * 1000000000, value = balance - (wei*gas), value must be > 0
+        gas = 50000 # gasLimit, set 60000-100000 if the transaction does not work, but then the minimum balance should be 0.0005 BNB. k = 1000000000, eth = 1000000000000000000, balance = 0.0005 * eth, gwei = 5 gas = 100000, wei = gwei * 1000000000, value = balance - (wei*gas), value must be > 0
         gwei = 5 # gasPrice in gwei
         wei = gwei * k # calculated gasPrice in wei
         summ = balance - (wei*gas)
