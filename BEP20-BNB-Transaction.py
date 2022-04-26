@@ -46,16 +46,15 @@ def myfunc():
         calcAmount = balance - (wei*gas) # calculated amount with network tax
         tax = (balance-calcAmount)/eth # tax
 
-        if amount > calcAmount:
-            print("Not enough funds. Too much gas price: " + str(tax))
-            print("Maximum allowed amount is " + str(calcAmount/eth))
-            sys.exit()
-        else:
         if amount == balance:
             gwei = 5
             wei = gwei * k
             global amount
             amount = balance - (wei*gas)
+        elsif amount > calcAmount:
+            print("Not enough funds. Too much gas price: " + str(tax))
+            print("Maximum allowed amount is " + str(calcAmount/eth))
+            sys.exit()
 
         nonce = web3.eth.getTransactionCount(account_1)
 
